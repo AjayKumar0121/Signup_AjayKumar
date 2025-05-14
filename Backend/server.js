@@ -1,7 +1,7 @@
 const express = require('express');
 const { Pool } = require('pg');
 const dotenv = require('dotenv');
-const cors = require('cors');
+
 const bcrypt = require('bcrypt');
 const multer = require('multer');
 const path = require('path');
@@ -9,6 +9,8 @@ const path = require('path');
 dotenv.config();
 
 const app = express();
+const cors = require('cors');
+app.use(cors());
 
 // CORS middleware with specific origins
 app.use(cors({
